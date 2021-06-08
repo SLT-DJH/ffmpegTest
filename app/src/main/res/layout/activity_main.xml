@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_board"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_pick_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="영상파일 선택"
+            android:layout_margin="10dp"/>
+
+        <Button
+            android:id="@+id/btn_pick_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이미지파일 선택"
+            android:layout_margin="10dp"/>
+        <Button
+            android:id="@+id/btn_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="시작하기"
+            android:layout_margin="10dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이미지 파일 루트"
+        app:layout_constraintTop_toBottomOf="@id/ll_board"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="영상 파일 루트"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/ll_board"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
